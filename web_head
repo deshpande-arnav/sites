@@ -19,17 +19,34 @@
   </style>
 </head>
 <body>
-  <h1>Arnav Deshpande</h1>
-  <p class="subtitle">Economics PhD | Macro-development & labor</p>
-
   <p>
-    Welcome to my corner of the internet! I am a graduate student at NYU; and my research focusses on quantitative macroeconomics and macro-development.
-I am very happy to connect with others working on all sorts of topics in {macro} U {dev}. Please feel free to shoot me an email!
+Welcome to my corner of the internet, thanks for stopping by! I am a third year economics PhD student at NYU. My research focusses on quantitative macroeconomics and macro-development.
+I am passionate about all sorts of topics in {macro} U {dev}, and always eager to chat!
   </p>
 
-  <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:ad6790@nyu.edu">ad6790@nyu.edu</a><br />
-  </p>
-</body>
+<p>
+  <a href="cv.pdf" target="_blank">CV</a>
+  &nbsp;&middot;&nbsp;
+  Contact: <a href="mailto:ad6790@nyu.edu">ad6790@nyu.edu</a>
+</p>
+
+<h2>Work in Progress (presentation mode)</h2>
+<ul>
+  <li>
+    <strong>Aggregate Effects of Workfare Programs</strong>
+  </li>
+  <li>
+    <strong>Technology and search in the market for rental housing</strong>
+    <span style="color:#555;">(with Olalekan Bello)</span>
+  </li>
+</ul>
+
+<h2>Pre-doctoral</h2>
+<ul>
+  <li>
+    <strong>Challenges to measuring immunization coverage with asynchronous surveys</strong>
+    <span style="color:#555;">(with Rijul Grover and Rohini Somanathan)</span>
+  </li>
+</ul>
+</body> 
 </html>
