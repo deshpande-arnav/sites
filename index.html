@@ -13,7 +13,8 @@
     }
 
     body {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
 
@@ -23,32 +24,31 @@
       padding: 0 1rem;
 
       line-height: 1.55;
-      font-size: 15px;  /* smaller + sharper */
+      font-size: 15px;
       color: var(--text);
     }
 
     a { color: var(--text); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    nav {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.25rem;
-      font-size: 0.95rem;
+    h1 {
+      font-size: 1.65rem;     /* smaller */
+      margin: 0;
+      font-weight: 520;       /* less bold */
+      letter-spacing: -0.005em;
     }
 
-    h1 {
-      font-size: 1.85rem;
-      margin: 0 0 0.75rem 0;
-      font-weight: 650;
-      letter-spacing: -0.01em;
+    .address {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
     }
 
     .header {
       display: flex;
       gap: 1.25rem;
       align-items: flex-start;
-      margin-top: 0.75rem;
+      margin-top: 1.2rem;
     }
 
     .profile-pic {
@@ -81,11 +81,10 @@
     h2 {
       font-size: 1.05rem;
       margin: 0 0 0.75rem 0;
-      font-weight: 650;
+      font-weight: 600;
       letter-spacing: 0.01em;
     }
 
-    /* Research list without bullets */
     .paper {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -93,10 +92,13 @@
       padding: 0.7rem 0;
       border-top: 1px solid var(--rule);
     }
-    .paper:first-of-type { border-top: none; padding-top: 0.25rem; }
+    .paper:first-of-type {
+      border-top: none;
+      padding-top: 0.25rem;
+    }
 
     .paper-title {
-      font-weight: 520; /* not bold */
+      font-weight: 520;
     }
 
     .paper-meta {
@@ -122,18 +124,17 @@
 </head>
 
 <body>
-  <nav>
-    <a class="active" href="index.html">Home</a>
-  </nav>
 
   <h1>Arnav Deshpande</h1>
+  <div class="address">733, 19 West 4th St., New York 10012</div>
 
   <div class="header">
     <img src="me.jpg" alt="Arnav Deshpande" class="profile-pic" />
     <div>
       <p class="intro">
-        Welcome to my corner of the internet, thanks for stopping by! I am a third year economics PhD student at NYU.
-        I am interested in macroeconomics and macro-development.
+        Welcome to my corner of the internet, thanks for stopping by! I am a third year
+        economics PhD student at NYU. I am interested in macroeconomics and
+        macro-development.
       </p>
 
       <p class="links">
@@ -143,7 +144,8 @@
         <span class="sep">·</span>
         <a href="https://x.com/arnav_econ" target="_blank" rel="noopener" aria-label="X">𝕏</a>
         <span class="sep">·</span>
-        <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/"
+           target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </div>
   </div>
@@ -155,18 +157,18 @@
   <div class="paper">
     <div class="paper-title">Aggregate Effects of Workfare Programs</div>
     <div class="paper-links">
-      <a href="workfare_slides.pdf" target="_blank" rel="noopener">Slides</a>
+      <a href="workfare_slides.pdf" target="_blank">Slides</a>
       <span class="sep">·</span>
-      <a href="workfare_draft.pdf" target="_blank" rel="noopener">Draft</a>
+      <a href="workfare_draft.pdf" target="_blank">Draft</a>
     </div>
   </div>
 
   <div class="paper">
     <div class="paper-title">Technology and Search in the Market for Rental Housing</div>
     <div class="paper-links">
-      <a href="rental_slides.pdf" target="_blank" rel="noopener">Slides</a>
+      <a href="rental_slides.pdf" target="_blank">Slides</a>
       <span class="sep">·</span>
-      <a href="rental_draft.pdf" target="_blank" rel="noopener">Draft</a>
+      <a href="rental_draft.pdf" target="_blank">Draft</a>
     </div>
     <div class="paper-meta">with Olalekan Bello</div>
   </div>
@@ -181,14 +183,17 @@
   <h2>Pre-doctoral</h2>
 
   <div class="paper">
-    <div class="paper-title">Challenges to Measuring Immunization Coverage with Asynchronous Surveys</div>
+    <div class="paper-title">
+      Challenges to Measuring Immunization Coverage with Asynchronous Surveys
+    </div>
     <div class="paper-links">
-      <a href="immunization_slides.pdf" target="_blank" rel="noopener">Slides</a>
+      <a href="immunization_slides.pdf" target="_blank">Slides</a>
       <span class="sep">·</span>
-      <a href="immunization_draft.pdf" target="_blank" rel="noopener">Draft</a>
+      <a href="immunization_draft.pdf" target="_blank">Draft</a>
     </div>
     <div class="paper-meta">with Rijul Grover and Rohini Somanathan</div>
   </div>
 
 </body>
 </html>
+
