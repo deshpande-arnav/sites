@@ -120,6 +120,55 @@
       .paper { grid-template-columns: 1fr; }
       .paper-links { white-space: normal; }
     }
+
+    <style>
+  /* ... your existing CSS ... */
+
+  .paper-details {
+    grid-column: 1 / -1;
+    margin-top: 0.45rem;
+    color: var(--muted);
+    font-size: 0.95em;
+  }
+
+  .paper-details summary {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text);
+    font-weight: 520;
+  }
+
+  /* hide default marker (Chrome/Safari) */
+  .paper-details summary::-webkit-details-marker { display: none; }
+
+  /* custom chevron */
+  .paper-details summary::before {
+    content: "▸";
+    color: var(--muted);
+    transform: translateY(-0.5px);
+  }
+  .paper-details[open] summary::before { content: "▾"; }
+
+  .paper-details .details-body {
+    margin-top: 0.5rem;
+    padding-left: 1.05rem; /* aligns with chevron */
+  }
+
+  .details-label {
+    color: var(--text);
+    font-weight: 520;
+    margin-top: 0.55rem;
+  }
+
+  .places {
+    margin: 0.2rem 0 0 0;
+    padding-left: 1.05rem;
+  }
+  .places li { margin: 0.15rem 0; }
   </style>
 </head>
 
@@ -154,24 +203,71 @@
 
   <h2>Work in progress</h2>
 
-  <div class="paper">
-    <div class="paper-title">Aggregate Effects of Workfare Programs</div>
-    <div class="paper-links">
-      <a href="student_macro_lunch_Feb26.pdf" target="_blank">Slides</a>
-      <span class="sep">·</span>
-      <a href="workfare_draft.pdf" target="_blank"></a>
-    </div>
+<div class="paper">
+  <div class="paper-title">Aggregate Effects of Workfare Programs</div>
+  <div class="paper-links">
+    <a href="student_macro_lunch_Feb26.pdf" target="_blank">Slides</a>
+    <span class="sep">·</span>
+    <a href="workfare_draft.pdf" target="_blank"></a>
   </div>
 
-  <div class="paper">
-    <div class="paper-title">Technology and Search in the Market for Rental Housing</div>
-    <div class="paper-links">
-      <a href="lab.pdf" target="_blank">Slides</a>
-            <span class="sep">·</span>
-      <a href="workfare_draft.pdf" target="_blank"></a>
+  <details class="paper-details">
+    <summary>Abstract &amp; Talks</summary>
+    <div class="details-body">
+      <div class="details-label">Abstract</div>
+      <p style="margin:0.25rem 0 0 0;">
+Cash-for-work ('workfare') programs are pervasive in developing countries. These programs provide income in exchange for short-term manual labor supplied to public works projects. This paper investigates the role of cash-for-work programs in attenuating efficiency losses due to labor market power. I study workfare in a static model of oligopsonistic competition with endogenously variable wage markdowns. By taking away a share of the local labor market, workfare programs flatten the supply curve facing firms, reducing their labor market power. When the markdown reduction is big enough, workfare expansions  can produce an increase in aggregate market employment and wages. Furthermore, these effects are larger in more concentrated labor markets. These findings are consistent with key empirical patterns discovered in a randomized experiment that improved workfare access in India. I undertake a quantitative evaluation of the model in reproducing the results of the experiment. The exercise sheds light on the mechanisms in the model and also on our interpretation of the empirical findings.
+Going ahead, I want assess the welfare consequences of using unconditional cash transfers as an alternative to workfare programs, accounting for the efficiency effects of workfare in the presence of market power.
+      </p>
+
+      <div class="details-label">Places presented</div>
+      <ul class="places">
+        <li>NYU Student Applied Micro Lunch (Fall 2025), NYU Student Macro Lunch (Spring 2026) </li>
+      </ul>
     </div>
-    <div class="paper-meta">with Olalekan Bello</div>
+  </details>
+</div>
+
+<div class="paper">
+  <div class="paper-title">
+    Technology and Search in the Market for Rental Housing
   </div>
+
+  <div class="paper-links">
+    <a href="lab.pdf" target="_blank">Slides</a>
+    <span class="sep">·</span>
+    <a href="housing_draft.pdf" target="_blank"></a>
+  </div>
+
+  <div class="paper-meta">with Olalekan Bello</div>
+
+  <details class="paper-details">
+    <summary>Abstract &amp; places presented</summary>
+    <div class="details-body">
+
+      <div class="details-label">Abstract</div>
+      <p>
+        <!-- Put your abstract here -->
+The arrival of search platforms such as Zillow and Streeteasy has changed how people look for housing.
+This paper studies how the resolution of search frictions affects the market for rental housing. 
+We study improvements in search technology in an equilibrium model of frictional housing markets. 
+Whether rents go up or down depends on how technological improvements differentially affect the option values of waiting 
+for landlords and renters. Going ahead, we want to quantify the effect of search platforms on rents in New York City. We also want to 
+study how the resolution of search frictions affect landlords and renters over the income distribution. 
+        
+    
+
+      </p>
+
+      <div class="details-label">Places presented</div>
+      <ul class="places">
+        <li>NYU Macro Student Lunch (Fall 2025), NYU Stern IO Mini Day (Summer 2025)</li>
+        <li><!-- add more --></li>
+      </ul>
+
+    </div>
+  </details>
+</div>
 
   <div class="paper">
     <div class="paper-title">Chasing Demand</div>
