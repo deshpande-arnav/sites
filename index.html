@@ -154,9 +154,10 @@
   .paper-details[open] summary::before { content: "▾"; }
 
   .paper-details .details-body {
-    margin-top: 0.5rem;
-    padding-left: 1.05rem; /* aligns with chevron */
-  }
+  margin-top: 0.5rem;
+  padding-left: 1.05rem; /* keep chevron alignment */
+  max-width: 100%;
+}
 
   .details-label {
     color: var(--text);
