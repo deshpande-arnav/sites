@@ -15,14 +15,10 @@
     body {
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
                    "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-
       background: var(--bg);
       max-width: 780px;
       margin: 2.75rem auto;
       padding: 0 1rem;
-
       line-height: 1.55;
       font-size: 15px;
       color: var(--text);
@@ -32,10 +28,9 @@
     a:hover { text-decoration: underline; }
 
     h1 {
-      font-size: 1.65rem;     /* smaller */
+      font-size: 1.65rem;
       margin: 0;
-      font-weight: 520;       /* less bold */
-      letter-spacing: -0.005em;
+      font-weight: 520;
     }
 
     .address {
@@ -56,7 +51,6 @@
       height: 190px;
       object-fit: cover;
       border-radius: 14px;
-      flex-shrink: 0;
     }
 
     .intro {
@@ -82,13 +76,9 @@
       font-size: 1.05rem;
       margin: 0 0 0.75rem 0;
       font-weight: 600;
-      letter-spacing: 0.01em;
     }
 
     .paper {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 0.35rem 1rem;
       padding: 0.7rem 0;
       border-top: 1px solid var(--rule);
     }
@@ -101,75 +91,21 @@
       font-weight: 520;
     }
 
+    .paper-links {
+      font-size: 0.95em;
+      color: var(--muted);
+      margin-left: 6px;
+    }
+
     .paper-meta {
       color: var(--muted);
       font-size: 0.95em;
-      grid-column: 1 / -1;
     }
 
-    .paper-links {
-      white-space: nowrap;
-      font-size: 0.95em;
-      color: var(--muted);
-    }
-    .paper-links a { color: var(--text); }
-
-    @dia (max-width: 640px) {
+    @media (max-width: 640px) {
       .header { flex-direction: column; }
       .profile-pic { width: 160px; height: 160px; }
-      .paper { grid-template-columns: 1fr; }
-      .paper-links { white-space: normal; }
     }
-
-    <style>
-  /* ... your existing CSS ... */
-
-  .paper-details {
-    grid-column: 1 / -1;
-    margin-top: 0.45rem;
-    color: var(--muted);
-    font-size: 0.95em;
-  }
-
-  .paper-details summary {
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: var(--text);
-    font-weight: 520;
-  }
-
-  /* hide default marker (Chro/Safari) */
-  .paper-details summary::-webkit-details-marker { display: none; }
-
-  /* custom chevron */
-  .paper-details summary::before {
-    content: "▸";
-    color: var(--muted);
-    transform: translateY(-0.5px);
-  }
-  .paper-details[open] summary::before { content: "▾"; }
-
-  .paper-details .details-body {
-  margin-top: 0.5rem;
-  padding-left: 1.05rem; /* keep chevron alignment */
-  max-width: 100%;
-}
-
-  .details-label {
-    color: var(--text);
-    font-weight: 520;
-    margin-top: 0.55rem;
-  }
-
-  .places {
-    margin: 0.2rem 0 0 0;
-    padding-left: 1.05rem;
-  }
-  .places li { margin: 0.15rem 0; }
   </style>
 </head>
 
@@ -188,14 +124,13 @@
       </p>
 
       <p class="links">
-        <a href="cv_deshpande_2.pdf" target="_blank" rel="noopener">cv</a>
+        <a href="cv_deshpande_2.pdf" target="_blank">cv</a>
         <span class="sep">·</span>
         <a href="mailto:ad6790@nyu.edu">ad6790@nyu.edu</a>
         <span class="sep">·</span>
-        <a href="https://x.com/arnav_econ" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+        <a href="https://x.com/arnav_econ" target="_blank">𝕏</a>
         <span class="sep">·</span>
-        <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/"
-           target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/" target="_blank">LinkedIn</a>
       </p>
     </div>
   </div>
@@ -204,66 +139,24 @@
 
   <h2>Work in progress</h2>
 
-<div class="paper">
-  <div class="paper-title">Aggregate Effects of Workfare Programs</div>
-  <div class="paper-links">
-    <a href="" target="_blank">Slides</a>
-    <span class="sep">·</span>
-    <a href="" target="_blank">New draft soon</a>
-  </div>
-
-  <details class="paper-details">
-    <summary>Abstract &amp; Talks</summary>
-      <div class="details-label">Talks</div>
-      <ul class="places">
-        <li>NYU Student Macro Lunch (Spring 2026), NYU Student Applied Micro Lunch (Fall 2025)</li>
-        
-      </ul>
-    <div class="details-body">
-      <div class="details-label">Abstract</div>
-      <p style="margin:0.25rem 0 0 0;">
-Cash-for-work ('workfare') programs are pervasive in developing countries. These programs provide income in exchange for short-term manual labor supplied to public works projects. This paper investigates the role of cash-for-work programs in attenuating efficiency losses due to labor market power. I study workfare in a static model of oligopsonistic competition with endogenously variable wage markdowns. By taking away a share of the local labor market, workfare programs flatten the supply curve facing firms, reducing their labor market power. When the markdown reduction is big enough, workfare expansions produce an increase in aggregate market employment and wages. Furthermore, these effects are larger in more concentrated labor markets. These findings are consistent with key empirical patterns discovered in a randomized experiment that improved workfare access in India. I undertake a quantitative evaluation of the model in reproducing the results of the experiment. The exercise sheds light on the mechanisms in the model and also on our interpretation of the empirical findings.
-Going ahead, I want assess the welfare consequences of using unconditional cash transfers as an alternative to workfare programs, accounting for the efficiency effects of workfare in the presence of market power.
-      </p>
+  <div class="paper">
+    <div class="paper-title">
+      Aggregate Effects of Workfare Programs
+      <span class="paper-links">
+        (<a href="">Slides</a> · <a href="">Draft</a>)
+      </span>
     </div>
-  </details>
-</div>
-<div class="paper">
-  <div class="paper-title">
-    Technology and Search in the Market for Rental Housing
   </div>
 
-  <div class="paper-links">
-    <a href="" target="_blank">Slides</a>
-    <span class="sep">·</span>
-    <a href="housing_draft.pdf" target="_blank"></a>
-  </div>
-
-  <div class="paper-meta">with Olalekan Bello</div>
-
-  <details class="paper-details">
-    <summary>Abstract &amp; Talks</summary>
-     <div class="details-label">Talks</div>
-      <ul class="places">
-        <li>NYU Student Macro Lunch (Fall 2025), NYU Stern IO Mini Day (Summer 2025)</li>
-        
-      </ul>
-    
-    <div class="details-body">
-
-      <div class="details-label">Abstract</div>
-      <p style="margin:0.25rem 0 0 0;">
-        The arrival of search platforms such as Zillow and Streeteasy has changed how people look for housing.
-        This paper studies how the resolution of search frictions affects the market for rental housing.
-        We study improvements in search technology in an equilibrium model of frictional housing markets.
-        Whether rents go up or down depends on how technological improvements differentially affect the option values of waiting
-        for landlords and renters. Going ahead, we want to quantify the effect of search platforms on rents in New York City. We also want to
-        study how the resolution of search frictions affect landlords and renters over the income distribution.
-      </p>
-
+  <div class="paper">
+    <div class="paper-title">
+      Technology and Search in the Market for Rental Housing
+      <span class="paper-links">
+        (<a href="">Slides</a> · <a href="housing_draft.pdf">Draft</a>)
+      </span>
     </div>
-  </details>
-</div>
+    <div class="paper-meta">with Olalekan Bello</div>
+  </div>
 
   <div class="paper">
     <div class="paper-title">Chasing Demand</div>
@@ -274,30 +167,14 @@ Going ahead, I want assess the welfare consequences of using unconditional cash 
 
   <h2>Pre-doctoral</h2>
 
-<div class="paper">
-  <div class="paper-title">
-    Challenges to Measuring Immunization Coverage with Asynchronous Surveys
-  </div>
-
-  <div class="paper-links"></div>
-
-  <div class="paper-meta">
-    with Rijul Grover and Rohini Somanathan
-  </div>
-
-  <details class="paper-details">
-    <summary>Abstract</summary>
-    <div class="details-body">
-
-      <div class="details-label">Abstract</div>
-      <p style="margin:0.25rem 0 0 0;">
-The limited public health infrastructure in many low and middle income countries is accompanied by weak health information systems. Due to  the unavailability of administrative data, many studies of COVID impact have relied  on asynchronous survey data available from demographic health surveys.  The pandemic led to a decline in health coverage but also to a hiatus in health surveys. This meant that children born in birth cohorts exposed to the pandemic were interviewed  at very different ages. 
-Estimates of the impact of the pandemic on routine immunization coverage are therefore the  combined effect of disruptions in service delivery and differences in survey timing across regions. Regional comparisons of coverage that do not take into account this {\it survey timing effect} are therefore biased.  We illustrate this effect using data on the coverage and timeliness of polio vaccinations for different samples of the National Family Health Survey in India, collected between 2019-2021. We show that for cohorts born in the second half of 2019 and the first quarter of 2020, coverage and the mean age at vaccination conditional on coverage were both  higher if they were interviewed at  later stages of the survey.
-      </p>
-
+  <div class="paper">
+    <div class="paper-title">
+      Challenges to Measuring Immunization Coverage with Asynchronous Surveys
     </div>
-  </details>
-</div>
+    <div class="paper-meta">
+      with Rijul Grover and Rohini Somanathan
+    </div>
+  </div>
 
 </body>
 </html>
