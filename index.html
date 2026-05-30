@@ -34,7 +34,8 @@
       background: transparent;
     }
 
-    /* BACKGROUND ARTWORK */
+    /* ---------- BACKGROUND IMAGE ---------- */
+
     .bg-art {
       position: fixed;
       inset: 0;
@@ -45,55 +46,59 @@
 
     .bg-art img {
       position: absolute;
-      left: 0;
-      top: 0;
 
-      height: 100vh;
+      right: 0;
+      bottom: 0;
+
+      height: 95vh;
       width: auto;
 
-      opacity: 0.92;
-
       object-fit: contain;
-      object-position: left center;
+      object-position: right bottom;
 
-      /* smooth fade */
+      opacity: 0.95;
+
       mask-image: linear-gradient(
-        to right,
+        to left,
         rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 38%,
-        rgba(0,0,0,0.88) 52%,
-        rgba(0,0,0,0.58) 66%,
-        rgba(0,0,0,0.18) 80%,
+        rgba(0,0,0,1) 18%,
+        rgba(0,0,0,0.95) 35%,
+        rgba(0,0,0,0.75) 50%,
+        rgba(0,0,0,0.45) 65%,
+        rgba(0,0,0,0.15) 82%,
         rgba(0,0,0,0) 100%
       );
 
       -webkit-mask-image: linear-gradient(
-        to right,
+        to left,
         rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 38%,
-        rgba(0,0,0,0.88) 52%,
-        rgba(0,0,0,0.58) 66%,
-        rgba(0,0,0,0.18) 80%,
+        rgba(0,0,0,1) 18%,
+        rgba(0,0,0,0.95) 35%,
+        rgba(0,0,0,0.75) 50%,
+        rgba(0,0,0,0.45) 65%,
+        rgba(0,0,0,0.15) 82%,
         rgba(0,0,0,0) 100%
       );
     }
 
-    /* additional soft blending layer */
     .bg-fade {
       position: absolute;
       inset: 0;
 
       background: linear-gradient(
-        to right,
+        to left,
         rgba(251,251,251,0) 0%,
-        rgba(251,251,251,0.06) 30%,
-        rgba(251,251,251,0.22) 45%,
-        rgba(251,251,251,0.52) 58%,
-        rgba(251,251,251,0.82) 70%,
-        rgba(251,251,251,0.96) 82%,
+        rgba(251,251,251,0.02) 25%,
+        rgba(251,251,251,0.08) 40%,
+        rgba(251,251,251,0.18) 52%,
+        rgba(251,251,251,0.38) 63%,
+        rgba(251,251,251,0.68) 75%,
+        rgba(251,251,251,0.9) 87%,
         rgba(251,251,251,1) 100%
       );
     }
+
+    /* ---------- LINKS ---------- */
 
     a {
       color: var(--text);
@@ -103,6 +108,8 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* ---------- HEADER ---------- */
 
     h1 {
       font-size: 1.65rem;
@@ -188,6 +195,8 @@
       .bg-art img {
         width: 100vw;
         height: auto;
+        right: 0;
+        bottom: 0;
       }
 
       .header {
@@ -204,7 +213,6 @@
 
 <body>
 
-  <!-- CHANGE THIS FILE NAME -->
   <div class="bg-art">
     <img src="IMG_1295.jpg" alt="" />
     <div class="bg-fade"></div>
@@ -261,13 +269,13 @@
     </div>
   </div>
 
+    <div class="paper-meta">
+      with Martin Rotemberg and Sharon Traiberman
+    </div>
+
   <div class="paper">
     <div class="paper-title">
       Chasing Demand
-    </div>
-
-    <div class="paper-meta">
-      with Martin Rotemberg and Sharon Traiberman
     </div>
   </div>
 
