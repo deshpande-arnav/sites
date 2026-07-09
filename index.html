@@ -3,295 +3,301 @@
 <head>
   <meta charset="UTF-8" />
   <title>Arnav Deshpande</title>
+  <meta name="description" content="Arnav Deshpande — Economics PhD student at New York University, working in macroeconomics and macro-development." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,460;9..144,560&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg: #fbfbfb;
-      --text: #111;
-      --muted: #5a5a5a;
-      --rule: #e7e7e7;
+      --paper:      #fcfcfb;   /* faint cool-neutral white, not warm cream       */
+      --ink:        #17161c;   /* near-black with a whisper of violet undertone  */
+      --muted:      #6a6872;   /* secondary text                                 */
+      --faint:      #e8e6ec;   /* rules and dividers                             */
+      --accent:     #4b2067;   /* deep NYU-adjacent violet, used sparingly       */
+      --accent-ink: #3a1852;   /* darker violet for hovered link text            */
+      --chip-bg:    #f3f1f6;   /* soft violet-grey chip fill                     */
+
+      --serif:  "Fraunces", Georgia, "Times New Roman", serif;
+      --sans:   "Libre Franklin", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono:   "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
     }
 
-    html {
-      background: var(--bg);
+    *{ box-sizing: border-box; }
+
+    html{ background: var(--paper); }
+
+    body{
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 15.5px;
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    body {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
-
-      max-width: 780px;
-      margin: 2.75rem auto;
-      padding: 0 1rem;
-
-      line-height: 1.55;
-      font-size: 15px;
-      color: var(--text);
-
-      position: relative;
-      z-index: 1;
-      background: transparent;
+    .wrap{
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 4rem;
     }
 
-    /* ---------- BACKGROUND IMAGE ---------- */
-
-    .bg-art {
-      position: fixed;
-      inset: 0;
-      z-index: -10;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
-    .bg-art img {
-      position: absolute;
-
-      right: 0;
-      bottom: 0;
-
-      height: 95vh;
-      width: auto;
-
-      object-fit: contain;
-      object-position: right bottom;
-
-      opacity: 0.95;
-
-      mask-image: linear-gradient(
-        to left,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 18%,
-        rgba(0,0,0,0.95) 35%,
-        rgba(0,0,0,0.75) 50%,
-        rgba(0,0,0,0.45) 65%,
-        rgba(0,0,0,0.15) 82%,
-        rgba(0,0,0,0) 100%
-      );
-
-      -webkit-mask-image: linear-gradient(
-        to left,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 18%,
-        rgba(0,0,0,0.95) 35%,
-        rgba(0,0,0,0.75) 50%,
-        rgba(0,0,0,0.45) 65%,
-        rgba(0,0,0,0.15) 82%,
-        rgba(0,0,0,0) 100%
-      );
-    }
-
-    .bg-fade {
-      position: absolute;
-      inset: 0;
-
-      background: linear-gradient(
-        to left,
-        rgba(251,251,251,0) 0%,
-        rgba(251,251,251,0.02) 25%,
-        rgba(251,251,251,0.08) 40%,
-        rgba(251,251,251,0.18) 52%,
-        rgba(251,251,251,0.38) 63%,
-        rgba(251,251,251,0.68) 75%,
-        rgba(251,251,251,0.9) 87%,
-        rgba(251,251,251,1) 100%
-      );
+    @media (prefers-reduced-motion: no-preference){
+      .wrap{ animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+      @keyframes rise{ from{ opacity:0; transform: translateY(8px);} to{ opacity:1; transform:none; } }
     }
 
     /* ---------- LINKS ---------- */
-
-    a {
-      color: var(--text);
-      text-decoration: none;
+    a{ color: var(--ink); text-decoration: none; }
+    a:focus-visible{
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 3px;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ---------- HEADER ---------- */
-
-    h1 {
-      font-size: 1.65rem;
+    /* ---------- MASTHEAD ---------- */
+    .name{
+      font-family: var(--serif);
+      font-weight: 460;
+      font-size: clamp(2.35rem, 6vw, 3.15rem);
+      line-height: 1.02;
+      letter-spacing: -0.015em;
       margin: 0;
-      font-weight: 520;
     }
 
-    .address {
-      font-size: 0.9rem;
+    .affil{
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
       color: var(--muted);
-      margin-top: 0.2rem;
+      margin-top: 0.85rem;
     }
 
-    .header {
+    .lede{
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 2.5rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+
+    .intro{
+      color: #2c2b33;
+      max-width: 44ch;
+      margin: 0.35rem 0 0;
+      font-size: 1.02rem;
+    }
+
+    .links{
+      margin-top: 1.35rem;
       display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-      margin-top: 1.2rem;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.65rem;
+      font-family: var(--mono);
+      font-size: 0.8rem;
     }
+    .links a{
+      color: var(--muted);
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--faint);
+      transition: color .15s ease, border-color .15s ease;
+    }
+    .links a:hover{ color: var(--accent-ink); border-color: var(--accent); }
 
-    .profile-pic {
-      width: 190px;
-      height: 190px;
+    .portrait{
+      width: 200px;
+      height: 240px;
       object-fit: cover;
-      border-radius: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--faint);
+      box-shadow: 0 1px 0 rgba(23,22,28,0.04), 0 16px 34px -18px rgba(23,22,28,0.38);
     }
 
-    .intro {
-      color: var(--muted);
-      max-width: 68ch;
-      margin: 0;
-    }
-
-    .links {
-      margin-top: 0.65rem;
-      font-size: 0.98rem;
-    }
-
-    .sep {
-      color: var(--muted);
-      padding: 0 0.35rem;
-    }
-
-    hr {
+    /* ---------- SECTIONS ---------- */
+    .rule{
       border: none;
-      border-top: 1px solid var(--rule);
-      margin: 1.5rem 0;
+      height: 1px;
+      background: var(--faint);
+      margin: 3rem 0 2.25rem;
+    }
+    /* accent tick sitting on the first rule */
+    .rule.lead{
+      position: relative;
+      margin-top: 2.75rem;
+    }
+    .rule.lead::before{
+      content: "";
+      position: absolute;
+      left: 0; top: 0;
+      width: 42px; height: 1px;
+      background: var(--accent);
     }
 
-    h2 {
-      font-size: 1.05rem;
-      margin: 0 0 0.75rem 0;
-      font-weight: 600;
-    }
-
-    .paper {
-      padding: 0.7rem 0;
-      border-top: 1px solid var(--rule);
-    }
-
-    .paper:first-of-type {
-      border-top: none;
-      padding-top: 0.25rem;
-    }
-
-    .paper-title {
-      font-weight: 520;
-    }
-
-    .paper-links {
-      font-size: 0.95em;
+    .eyebrow{
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
       color: var(--muted);
-      margin-left: 6px;
+      margin: 0 0 1.4rem;
     }
 
-    .paper-meta {
+    /* ---------- PAPERS ---------- */
+    .paper{
+      padding: 1.05rem 0;
+      border-top: 1px solid var(--faint);
+    }
+    .paper:first-of-type{ border-top: none; padding-top: 0; }
+
+    .paper-title{
+      font-family: var(--serif);
+      font-weight: 460;
+      font-size: 1.28rem;
+      line-height: 1.28;
+      letter-spacing: -0.005em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.4rem 0.7rem;
+    }
+
+    .paper-meta{
       color: var(--muted);
-      font-size: 0.95em;
+      font-size: 0.92rem;
+      margin-top: 0.3rem;
     }
+    .paper-meta .authors{ font-style: italic; }
+    .paper-meta a{
+      color: var(--muted);
+      border-bottom: 1px solid var(--faint);
+      transition: color .15s ease, border-color .15s ease;
+    }
+    .paper-meta a:hover{ color: var(--accent-ink); border-color: var(--accent); }
 
-    @media (max-width: 640px) {
+    .chip{
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      background: var(--chip-bg);
+      border: 1px solid var(--faint);
+      border-radius: 999px;
+      padding: 0.12rem 0.6rem;
+      white-space: nowrap;
+      transition: background .15s ease, border-color .15s ease;
+    }
+    .chip:hover{ background: #ece7f3; border-color: var(--accent); }
+    .chip .arw{ opacity: 0.55; }
 
-      .bg-art img {
-        width: 100vw;
-        height: auto;
-        right: 0;
-        bottom: 0;
-      }
+    /* ---------- FOOTER ---------- */
+    .foot{
+      margin-top: 3.25rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--faint);
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+    }
+    .foot .dot{ color: var(--accent); padding: 0 0.35em; }
 
-      .header {
-        flex-direction: column;
-      }
-
-      .profile-pic {
-        width: 160px;
-        height: 160px;
-      }
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 560px){
+      .wrap{ padding: 3rem 1.25rem 3rem; }
+      .lede{ grid-template-columns: 1fr; gap: 1.6rem; }
+      .portrait{ width: 168px; height: 202px; order: -1; }
     }
   </style>
 </head>
 
 <body>
+  <main class="wrap">
 
-  <div class="bg-art">
-    <img src="IMG_1295.jpg" alt="" />
-    <div class="bg-fade"></div>
-  </div>
+    <header>
+      <h1 class="name">Arnav Deshpande</h1>
+      <div class="affil">New York University</div>
 
-  <h1>Arnav Deshpande</h1>
-  <div class="address">733, 19 West 4th St., New York 10012</div>
+      <div class="lede">
+        <div>
+          <p class="intro">
+            I'm a third-year Economics PhD student at New York University,
+            working in macroeconomics and macro-development.
+          </p>
 
-  <div class="header">
-    <img src="me_long_3.jpg" alt="Arnav Deshpande" class="profile-pic" />
+          <nav class="links" aria-label="Profile links">
+            <a href="cv_deshpande_2.pdf" target="_blank" rel="noopener">CV</a>
+            <a href="mailto:ad6790@nyu.edu">Email</a>
+            <a href="https://x.com/arnav_econ" target="_blank" rel="noopener">Twitter / X</a>
+            <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/" target="_blank" rel="noopener">LinkedIn</a>
+          </nav>
+        </div>
 
-    <div>
-      <p class="intro">
-        Welcome to my corner of the internet, thanks for stopping by!
-        I am a third year economics PhD student at NYU.
-        I am interested in macroeconomics and macro-development.
-      </p>
+        <img class="portrait" src="me_long_3.jpg" alt="Arnav Deshpande" />
+      </div>
+    </header>
 
-      <p class="links">
-        <a href="cv_deshpande_2.pdf" target="_blank">cv</a>
-        <span class="sep">·</span>
-        <a href="mailto:ad6790@nyu.edu">ad6790@nyu.edu</a>
-        <span class="sep">·</span>
-        <a href="https://x.com/arnav_econ" target="_blank">𝕏</a>
-        <span class="sep">·</span>
-        <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/" target="_blank">LinkedIn</a>
-      </p>
-    </div>
-  </div>
+    <hr class="rule lead" />
 
-  <hr />
+    <section aria-labelledby="wp">
+      <p class="eyebrow" id="wp">Working papers</p>
 
-  <h2>Work in progress</h2>
+      <article class="paper">
+        <div class="paper-title">
+          Procompetitive Consequences of Workfare
+          <!-- When ready, add link chips here, e.g.:
+               <a class="chip" href="workfare_slides.pdf" target="_blank" rel="noopener">Slides</a>
+               <a class="chip" href="workfare_draft.pdf" target="_blank" rel="noopener">Draft <span class="arw">&#8599;</span></a> -->
+        </div>
+      </article>
+    </section>
 
-  <div class="paper">
-    <div class="paper-title">
-      Procompetitive consequences of workfare
-      <span class="paper-links">
-        (<a href="">Slides</a> · <a href="">Draft</a>)
-      </span>
-    </div>
-  </div>
+    <hr class="rule" />
 
-    <div class="paper">
-    <div class="paper-title">
-      Chasing Demand
-    </div>
-    <div class="paper-meta">
-      with Martin Rotemberg and Sharon Traiberman
-    </div>
+    <section aria-labelledby="wip">
+      <p class="eyebrow" id="wip">Work in progress</p>
 
-  <div class="paper">
-    <div class="paper-title">
-      Technology and Search in the Market for Rental Housing
-      <span class="paper-links">
-        (<a href="">Slides</a> · <a href="housing_draft.pdf">Draft</a>)
-      </span>
-    </div>
+      <article class="paper">
+        <div class="paper-title">Chasing Demand</div>
+        <div class="paper-meta">
+          with <span class="authors"><a href="https://sites.google.com/view/mrotemberg/" target="_blank" rel="noopener">Martin Rotemberg</a> and <a href="https://sites.google.com/site/straiberman/home" target="_blank" rel="noopener">Sharon Traiberman</a></span>
+        </div>
+      </article>
 
-    <div class="paper-meta">
-      with Olalekan Bello
-    </div>
-  </div>
+      <article class="paper">
+        <div class="paper-title">
+          Technology and Search in the Market for Rental Housing
+          <a class="chip" href="housing_draft.pdf" target="_blank" rel="noopener">Draft <span class="arw">&#8599;</span></a>
+        </div>
+        <div class="paper-meta">
+          with <span class="authors">Olalekan Bello</span>
+        </div>
+      </article>
+    </section>
 
-  </div>
+    <hr class="rule" />
 
-  <hr />
+    <section aria-labelledby="pre">
+      <p class="eyebrow" id="pre">Pre-doctoral</p>
 
-  <h2>Pre-doctoral</h2>
+      <article class="paper">
+        <div class="paper-title">
+          Challenges to Measuring Immunization Coverage with Asynchronous Surveys
+        </div>
+        <div class="paper-meta">
+          with <span class="authors">Rijul Grover and Rohini Somanathan</span>
+        </div>
+      </article>
+    </section>
 
-  <div class="paper">
-    <div class="paper-title">
-      Challenges to Measuring Immunization Coverage with Asynchronous Surveys
-    </div>
+    <footer class="foot">
+      733 &nbsp;19 West 4th Street<span class="dot">·</span>New York, NY 10012
+    </footer>
 
-    <div class="paper-meta">
-      with Rijul Grover and Rohini Somanathan
-    </div>
-  </div>
-
+  </main>
 </body>
 </html>
