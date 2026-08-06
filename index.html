@@ -2,222 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Arnav Deshpande</title>
-  <meta name="description" content="Arnav Deshpande — Economics PhD student at New York University, working in macroeconomics and macro-development." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,460;9..144,560&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
-    :root{
-      --paper:      #fcfcfb;   /* faint cool-neutral white, not warm cream       */
-      --ink:        #17161c;   /* near-black with a whisper of violet undertone  */
-      --muted:      #6a6872;   /* secondary text                                 */
-      --faint:      #e8e6ec;   /* rules and dividers                             */
-      --accent:     #4b2067;   /* deep NYU-adjacent violet, used sparingly       */
-      --accent-ink: #3a1852;   /* darker violet for hovered link text            */
-      --chip-bg:    #f3f1f6;   /* soft violet-grey chip fill                     */
-
-      --serif:  "Fraunces", Georgia, "Times New Roman", serif;
-      --sans:   "Libre Franklin", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      --mono:   "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    :root {
+      --background: #f4f2ed;
+      --text: #1f2428;
+      --muted: #687078;
+      --faint: #8a9095;
+      --line: #d8d4cc;
+      --link: #315b72;
+      --chip-background: #e8ecec;
+      --chip-border: #cbd3d3;
     }
 
-    *{ box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html{ background: var(--paper); }
+    html {
+      font-size: 16px;
+    }
 
-    body{
+    body {
       margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: var(--sans);
-      font-size: 15.5px;
-      line-height: 1.62;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
-    .wrap{
-      max-width: 720px;
+    main {
+      width: min(820px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 4.5rem 1.5rem 4rem;
+      padding: 72px 0 44px;
     }
 
-    @media (prefers-reduced-motion: no-preference){
-      .wrap{ animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
-      @keyframes rise{ from{ opacity:0; transform: translateY(8px);} to{ opacity:1; transform:none; } }
-    }
-
-    /* ---------- LINKS ---------- */
-    a{ color: var(--ink); text-decoration: none; }
-    a:focus-visible{
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 3px;
-    }
-
-    /* ---------- MASTHEAD ---------- */
-    .name{
-      font-family: var(--serif);
-      font-weight: 460;
-      font-size: clamp(2.35rem, 6vw, 3.15rem);
-      line-height: 1.02;
-      letter-spacing: -0.015em;
+    .name {
       margin: 0;
+      font-size: clamp(2.3rem, 6vw, 3.4rem);
+      font-weight: 600;
+      letter-spacing: -0.055em;
+      line-height: 1;
     }
 
-    .affil{
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.03em;
+    .affil {
+      margin-top: 12px;
       color: var(--muted);
-      margin-top: 0.85rem;
+      font-size: 1rem;
+      font-weight: 500;
     }
 
-    .lede{
+    .lede {
       display: grid;
-      grid-template-columns: 1fr 200px;
-      gap: 2.5rem;
-      align-items: start;
-      margin-top: 2rem;
+      grid-template-columns: minmax(0, 1fr) 155px;
+      align-items: center;
+      gap: 56px;
+      margin-top: 42px;
     }
 
-    .intro{
-      color: #2c2b33;
-      max-width: 44ch;
-      margin: 0.35rem 0 0;
-      font-size: 1.02rem;
+    .intro {
+      max-width: 580px;
+      margin: 0;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #343a3f;
     }
 
-    .links{
-      margin-top: 1.35rem;
+    .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.55rem 0.65rem;
-      font-family: var(--mono);
-      font-size: 0.8rem;
+      gap: 10px 22px;
+      margin-top: 25px;
     }
-    .links a{
-      color: var(--muted);
-      padding-bottom: 2px;
-      border-bottom: 1px solid var(--faint);
-      transition: color .15s ease, border-color .15s ease;
-    }
-    .links a:hover{ color: var(--accent-ink); border-color: var(--accent); }
 
-    .portrait{
-      width: 200px;
-      height: 240px;
+    a {
+      color: var(--link);
+      text-decoration: none;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .links a {
+      font-size: 0.93rem;
+      font-weight: 500;
+    }
+
+    .portrait {
+      display: block;
+      width: 155px;
+      height: 190px;
+      border-radius: 4px;
       object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid var(--faint);
-      box-shadow: 0 1px 0 rgba(23,22,28,0.04), 0 16px 34px -18px rgba(23,22,28,0.38);
+      filter: saturate(0.88);
     }
 
-    /* ---------- SECTIONS ---------- */
-    .rule{
-      border: none;
+    .rule {
       height: 1px;
-      background: var(--faint);
-      margin: 3rem 0 2.25rem;
-    }
-    /* accent tick sitting on the first rule */
-    .rule.lead{
-      position: relative;
-      margin-top: 2.75rem;
-    }
-    .rule.lead::before{
-      content: "";
-      position: absolute;
-      left: 0; top: 0;
-      width: 42px; height: 1px;
-      background: var(--accent);
+      margin: 42px 0;
+      border: 0;
+      background: var(--line);
     }
 
-    .eyebrow{
-      font-family: var(--mono);
-      font-size: 0.72rem;
+    .rule.lead {
+      margin-top: 50px;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      column-gap: 34px;
+    }
+
+    .eyebrow {
+      margin: 3px 0 0;
+      color: var(--faint);
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin: 0 0 1.4rem;
     }
 
-    /* ---------- PAPERS ---------- */
-    .paper{
-      padding: 1.05rem 0;
-      border-top: 1px solid var(--faint);
+    section > .paper {
+      grid-column: 2;
     }
-    .paper:first-of-type{ border-top: none; padding-top: 0; }
 
-    .paper-title{
-      font-family: var(--serif);
-      font-weight: 460;
-      font-size: 1.28rem;
-      line-height: 1.28;
-      letter-spacing: -0.005em;
+    section > .paper + .paper {
+      margin-top: 28px;
+    }
+
+    .paper-title {
       display: flex;
       flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.4rem 0.7rem;
+      align-items: center;
+      gap: 8px 11px;
+      font-size: 1.04rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1.5;
     }
 
-    .paper-meta{
+    .paper-meta {
+      margin-top: 7px;
       color: var(--muted);
-      font-size: 0.92rem;
-      margin-top: 0.3rem;
+      font-size: 0.91rem;
+      line-height: 1.55;
     }
-    .paper-meta .authors{ font-style: italic; }
-    .paper-meta a{
-      color: var(--muted);
-      border-bottom: 1px solid var(--faint);
-      transition: color .15s ease, border-color .15s ease;
-    }
-    .paper-meta a:hover{ color: var(--accent-ink); border-color: var(--accent); }
 
-    .chip{
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--accent-ink);
-      background: var(--chip-bg);
-      border: 1px solid var(--faint);
+    .authors {
+      color: #4d555b;
+    }
+
+    .authors a {
+      color: inherit;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border: 1px solid var(--chip-border);
       border-radius: 999px;
-      padding: 0.12rem 0.6rem;
-      white-space: nowrap;
-      transition: background .15s ease, border-color .15s ease;
-    }
-    .chip:hover{ background: #ece7f3; border-color: var(--accent); }
-    .chip .arw{ opacity: 0.55; }
-
-    /* ---------- FOOTER ---------- */
-    .foot{
-      margin-top: 3.25rem;
-      padding-top: 1.4rem;
-      border-top: 1px solid var(--faint);
-      font-family: var(--mono);
-      font-size: 0.74rem;
+      background: var(--chip-background);
+      color: #46585f;
+      font-size: 0.7rem;
+      font-weight: 600;
       letter-spacing: 0.02em;
-      color: var(--muted);
+      line-height: 1.3;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
-    .foot .dot{ color: var(--accent); padding: 0 0.35em; }
 
-    /* ---------- MOBILE ---------- */
-    @media (max-width: 560px){
-      .wrap{ padding: 3rem 1.25rem 3rem; }
-      .lede{ grid-template-columns: 1fr; gap: 1.6rem; }
-      .portrait{ width: 168px; height: 202px; order: -1; }
+    .chip:hover {
+      border-color: #aebaba;
+      text-decoration: none;
+    }
+
+    .arw {
+      font-size: 0.78rem;
+      line-height: 1;
+    }
+
+    .foot {
+      margin-top: 58px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--faint);
+      font-size: 0.78rem;
+    }
+
+    .dot {
+      padding: 0 9px;
+    }
+
+    @media (max-width: 680px) {
+      main {
+        width: min(100% - 30px, 820px);
+        padding-top: 42px;
+      }
+
+      .lede {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 32px;
+      }
+
+      .portrait {
+        grid-row: 1;
+        width: 125px;
+        height: 155px;
+      }
+
+      section {
+        display: block;
+      }
+
+      .eyebrow {
+        margin-bottom: 21px;
+      }
+
+      section > .paper + .paper {
+        margin-top: 26px;
+      }
+
+      .rule {
+        margin: 34px 0;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main class="wrap">
-
+  <main>
     <header>
       <h1 class="name">Arnav Deshpande</h1>
       <div class="affil">New York University</div>
@@ -232,12 +264,28 @@
           <nav class="links" aria-label="Profile links">
             <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
             <a href="mailto:ad6790@nyu.edu">Email</a>
-            <a href="https://x.com/arnav_econ" target="_blank" rel="noopener">Twitter / X</a>
-            <a href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/" target="_blank" rel="noopener">LinkedIn</a>
+            <a
+              href="https://x.com/arnav_econ"
+              target="_blank"
+              rel="noopener"
+            >
+              Twitter / X
+            </a>
+            <a
+              href="https://www.linkedin.com/in/arnav-deshpande-a8601912a/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
           </nav>
         </div>
 
-        <img class="portrait" src="me_long_4.jpg" alt="Arnav Deshpande" />
+        <img
+          class="portrait"
+          src="me_long_4.jpg"
+          alt="Arnav Deshpande"
+        />
       </div>
     </header>
 
@@ -248,36 +296,54 @@
 
       <article class="paper">
         <div class="paper-title">
-          Procompetitive Consequences of Workfare
-          <a class="chip" href="deshpande_15Jul.pdf" target="_blank" rel="noopener">Draft <span class="arw">&#8599;</span></a>
-          <!-- When ready, add link chips here, e.g.:
-               <a class="chip" href="workfare_slides.pdf" target="_blank" rel="noopener">Slides</a>
-                -->
+          <span>Procompetitive Consequences of Workfare</span>
+
+          <a
+            class="chip"
+            href="deshpande_15Jul.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Draft <span class="arw">&#8599;</span>
+          </a>
         </div>
       </article>
 
-<article class="paper">
-  <div class="paper-title">
-    Chasing Demand
-    <a class="chip" href="drt_5Aug.pdf" target="_blank" rel="noopener">
-      Draft <span class="arw">&#8599;</span>
-    </a>
-  </div>
+      <article class="paper">
+        <div class="paper-title">
+          <span>Chasing Demand</span>
 
-  <div class="paper-meta">
-    with
-    <span class="authors">
-      <a href="https://sites.google.com/view/mrotemberg/" target="_blank" rel="noopener">
-        Martin Rotemberg
-      </a>
-      and
-      <a href="https://sites.google.com/site/straiberman/home" target="_blank" rel="noopener">
-        Sharon Traiberman
-      </a>
-    </span>
-  </div>
-</article>
-      
+          <a
+            class="chip"
+            href="drt_5Aug.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Draft <span class="arw">&#8599;</span>
+          </a>
+        </div>
+
+        <div class="paper-meta">
+          with
+          <span class="authors">
+            <a
+              href="https://sites.google.com/view/mrotemberg/"
+              target="_blank"
+              rel="noopener"
+            >
+              Martin Rotemberg
+            </a>
+            and
+            <a
+              href="https://sites.google.com/site/straiberman/home"
+              target="_blank"
+              rel="noopener"
+            >
+              Sharon Traiberman
+            </a>
+          </span>
+        </div>
+      </article>
     </section>
 
     <hr class="rule" />
@@ -287,8 +353,9 @@
 
       <article class="paper">
         <div class="paper-title">
-          Technology and Search in the Market for Rental Housing
+          <span>Technology and Search in the Market for Rental Housing</span>
         </div>
+
         <div class="paper-meta">
           with <span class="authors">Olalekan Bello</span>
         </div>
@@ -302,18 +369,26 @@
 
       <article class="paper">
         <div class="paper-title">
-          Challenges to Measuring Immunization Coverage with Asynchronous Surveys
+          <span>
+            Challenges to Measuring Immunization Coverage with Asynchronous
+            Surveys
+          </span>
         </div>
+
         <div class="paper-meta">
-          with <span class="authors">Rijul Grover and Rohini Somanathan</span>
+          with
+          <span class="authors">
+            Rijul Grover and Rohini Somanathan
+          </span>
         </div>
       </article>
     </section>
 
     <footer class="foot">
-      733 &nbsp;19 West 4th Street<span class="dot">·</span>New York, NY 10012
+      733&nbsp;19 West 4th Street
+      <span class="dot">·</span>
+      New York, NY 10012
     </footer>
-
   </main>
 </body>
 </html>
